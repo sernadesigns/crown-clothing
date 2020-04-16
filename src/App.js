@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/header.component';
 import HomePage from './pages/homepage/homepage.component';
@@ -49,7 +49,6 @@ class App extends React.Component {
 			<div>
 				<Header currentUser={this.state.currentUser} />
 				<Switch>
-					<BrowserRouter basename='/crown-clothing' />
 					<Route exact path='/' component={HomePage} />
 					<Route path='/shop' component={ShopPage} />
 					<Route path='/signin' component={SignInPage} />
